@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字展销平台-迭代2</title>
+    <link rel="stylesheet" href="./1.css/1.css">
+</head>
+<body>
+    <!-- 固定导航栏（新增“登录/注册”链接） -->
+    <header class="navbar">
+        <div class="logo">数字展销平台</div>
+        <nav class="main-nav">
+            <ul>
+                <li class="dropdown">
+                    <a href="#">首页</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">图书分类 ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">文学小说</a></li>
+                        <li><a href="#">科技科普</a></li>
+                        <li><a href="#">历史地理</a></li>
+                        <li><a href="#">生活休闲</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">新品上市 ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">本周新品</a></li>
+                        <li><a href="#">本月新品</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">优惠活动 ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">限时折扣</a></li>
+                        <li><a href="#">满减活动</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">关于我们</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="login-link">登录/注册</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 登录表单（默认隐藏，点击“登录/注册”显示） -->
+    <div class="login-form" id="login-form">
+        <form action="#" method="post">
+            <h3>用户登录</h3>
+            <div class="form-group">
+                <label for="username">用户名/邮箱：</label>
+                <input type="email" id="username" name="username" placeholder="请输入邮箱" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">记住我</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">登录</button>
+                <a href="#" class="register-link">立即注册</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- 主内容区 -->
+    <main class="container">
+        <!-- 左侧栏：图书分类导航 -->
+        <aside class="sidebar-left">
+            <h3>图书分类</h3>
+            <ul class="category-list">
+                <li><a href="#">文学小说</a></li>
+                <li><a href="#">科技科普</a></li>
+                <li><a href="#">历史地理</a></li>
+                <li><a href="#">生活休闲</a></li>
+                <li><a href="#">经济管理</a></li>
+                <li><a href="#">哲学心理</a></li>
+                <li><a href="#">艺术设计</a></li>
+                <li><a href="#">教育考试</a></li>
+            </ul>
+        </aside>
+
+        <!-- 中间栏：图书展示区 + 图书推荐订阅表单 -->
+        <section class="main-content">
+            <div class="section-title">热门推荐</div>
+            <div class="books-container">
+                <!-- 图书项1 -->
+                <div class="book-item">
+                    <div class="book-img">
+                        <img src="hlm.png" alt="图书封面">
+                        <div class="book-overlay">
+                            <div class="book-detail">
+                                <h4>红楼梦</h4>
+                                <p>作者：曹雪芹</p>
+                                <p>出版社：中信出版社</p>
+                                <p>价格：68.00元</p>
+                                <p>简介：中国古代社会的是怎么样的，真正的文人写出的作品是怎么样的。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-title">红楼梦</div>
+                </div>
+
+                <!-- 图书项2 -->
+                <div class="book-item">
+                    <div class="book-img">
+                        <img src="rljs.jpg" alt="图书封面">
+                        <div class="book-overlay">
+                            <div class="book-detail">
+                                <h4>人类简史</h4>
+                                <p>作者：尤瓦尔·赫拉利</p>
+                                <p>出版社：南海出版公司</p>
+                                <p>价格：39.50元</p>
+                                <p>简介：巨著。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-title">人类简史</div>
+                </div>
+
+                <!-- 图书项3 -->
+                <div class="book-item">
+                    <div class="book-img">
+                        <img src="hz.jpg" alt="图书封面">
+                        <div class="book-overlay">
+                            <div class="book-detail">
+                                <h4>活着</h4>
+                                <p>作者：余华</p>
+                                <p>出版社：重庆出版社</p>
+                                <p>价格：58.00元</p>
+                                <p>简介：一部震撼人心的作品，讲述生命的坚韧与意义。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-title">活着</div>
+                </div>
+
+                <!-- 图书项4 -->
+                <div class="book-item">
+                    <div class="book-img">
+                        <img src="py.jpg" alt="图书封面">
+                        <div class="book-overlay">
+                            <div class="book-detail">
+                                <h4>Python编程</h4>
+                                <p>作者：未知</p>
+                                <p>出版社：作家出版社</p>
+                                <p>价格：28.00元</p>
+                                <p>简介：学习编程，快乐人生。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-title">Python编程</div>
+                </div>
+            </div>
+
+            <div class="section-title">新书上市</div>
+            <table class="new-books">
+                <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>出版社</th>
+                    <th>价格</th>
+                </tr>
+                <tr>
+                    <td>《未来简史》</td>
+                    <td>尤瓦尔·赫拉利</td>
+                    <td>中信出版社</td>
+                    <td>79.00元</td>
+                </tr>
+                <tr>
+                    <td>《长安的荔枝》</td>
+                    <td>马伯庸</td>
+                    <td>湖南文艺出版社</td>
+                    <td>45.00元</td>
+                </tr>
+                <tr>
+                    <td>《置身事内》</td>
+                    <td>兰小欢</td>
+                    <td>上海人民出版社</td>
+                    <td>59.00元</td>
+                </tr>
+                <tr>
+                    <td>《蛤蟆先生去看心理医生》</td>
+                    <td>罗伯特·戴博德</td>
+                    <td>天津人民出版社</td>
+                    <td>49.80元</td>
+                </tr>
+            </table>
+
+            <!-- 图书推荐订阅表单 -->
+            <div class="section-title">图书推荐订阅</div>
+            <form action="#" method="post" enctype="multipart/form-data" class="subscribe-form">
+                <fieldset>
+                    <legend>个人信息</legend>
+                    <div class="form-group">
+                        <label for="name">用户名：</label>
+                        <input type="text" id="name" name="name" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱：</label>
+                        <input type="email" id="email" name="email" placeholder="请输入邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <label>性别：</label>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">男</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">女</label>
+                    </div>
+                    <div class="form-group">
+                        <label>兴趣分类：</label>
+                        <input type="checkbox" id="literature" name="interest" value="literature">
+                        <label for="literature">文学</label>
+                        <input type="checkbox" id="science" name="interest" value="science">
+                        <label for="science">科普</label>
+                        <input type="checkbox" id="history" name="interest" value="history">
+                        <label for="history">历史</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">所在城市：</label>
+                        <select id="city" name="city" required>
+                            <option value="">请选择城市</option>
+                            <option value="beijing">北京</option>
+                            <option value="shanghai">上海</option>
+                            <option value="guangzhou">广州</option>
+                            <option value="shenzhen">深圳</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="avatar">上传头像：</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">订阅说明：</label>
+                        <textarea id="comment" name="comment" rows="5" cols="30" placeholder="请输入订阅需求..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">提交订阅</button>
+                        <button type="reset">重置表单</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- 右侧栏：促销信息 -->
+        <aside class="sidebar-right">
+            <div class="promotion">
+                <h3>限时促销</h3>
+                <div class="promo-item">
+                    <img src="30.jpg" alt="促销活动">
+                    <div class="promo-info">
+                        <p>全场图书满200减50</p>
+                        <p class="deadline">剩余时间: 2天8小时</p>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <img src="bz.jpg" alt="促销活动">
+                    <div class="promo-info">
+                        <p>精选图书买一送一</p>
+                        <p class="deadline">剩余时间: 5天12小时</p>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <img src="30.jpg" alt="促销活动">
+                    <div class="promo-info">
+                        <p>新用户注册立减30</p>
+                        <p class="deadline">长期有效</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2025 数字展销平台 版权所有</p>
+    </footer>
+
+    <script>
+        // 登录表单显示/隐藏逻辑
+        const loginLink = document.getElementById('login-link');
+        const loginForm = document.getElementById('login-form');
+        loginLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginForm.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
