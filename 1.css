@@ -93,6 +93,29 @@
             display: none; /* 默认隐藏 */
             z-index: 200;
         }
+                 /* 记住密码选项容器 - 水平居中 */
+                /* 记住密码选项容器 - 水平居中 */
+.form-group.remember-group {
+    display: flex;
+    justify-content: center; /* 整体在容器内水平居中 */
+    align-items: center; /* 勾选框与文字垂直居中对齐 */
+    gap: 8px; /* 勾选框与文字之间的间距 */
+    margin-bottom: 15px; /* 保持与其他表单项的间距一致 */
+}
+
+/* 取消 checkbox 默认的宽高限制（避免影响对齐） */
+.form-group.remember-group input[type="checkbox"] {
+    width: auto;
+    margin: 0; /* 清除默认margin，避免干扰对齐 */
+}
+
+/* 确保文字与勾选框基线对齐 */
+.form-group.remember-group label {
+    margin: 0; /* 清除默认margin */
+    display: inline-block;
+    vertical-align: middle;
+
+}
 
         /* 当表单被锚点目标选中时显示 */
         .login-form:target {
@@ -454,24 +477,3 @@
         }
 
 
-        /* 记住密码选项容器 - 水平居中 */
-.form-group.remember-group {
-    display: flex;
-    justify-content: center; /* 整体在容器内水平居中 */
-    align-items: center; /* 勾选框与文字垂直居中对齐 */
-    gap: 8px; /* 勾选框与文字之间的间距 */
-    margin-bottom: 15px; /* 保持与其他表单项的间距一致 */
-}
-
-/* 取消 checkbox 默认的宽高限制（避免影响对齐） */
-.form-group.remember-group input[type="checkbox"] {
-    width: auto;
-    margin: 0; /* 清除默认margin，避免干扰对齐 */
-}
-
-/* 确保文字与勾选框基线对齐 */
-.form-group.remember-group label {
-    margin: 0; /* 清除默认margin */
-    display: inline-block;
-    vertical-align: middle;
-}
